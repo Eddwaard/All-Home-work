@@ -142,13 +142,16 @@ public class Main {
 
     public static void task10() {
         System.out.println("Задача 8");
-        int flyingComet = 79; //Каждые 79 лет пролетаен новая комета
-        int year = 1896;
-        int year1 = 200; //Последние 200 лет пролетает комета
-        int year2 = 100; //Следующий ближайший год появления кометы
-        for (flyingComet = 1896; flyingComet <= year + year1 + year2; flyingComet = flyingComet + 79) {
-            System.out.println(flyingComet);
+        int year = 0; //Каждые 79 лет пролетаен новая комета
+        int yearNow = 2023;
+        int year1 = yearNow - 200; //Последние 200 лет пролетает комета
+        int year2 = yearNow + 100; //Следующий ближайший год появления кометы
+        for (; year <= year2; year = year + 79) {
+            if (year <= year2 && year >= year1) {
+                System.out.println(year);
+            }
         }
-
     }
 }
+
+
