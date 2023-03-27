@@ -7,139 +7,101 @@ public class Main {
         task5();
         task6();
         task7();
+        task8();
+        task9();
+        task10();
+        task11();
     }
 
     public static void task1() {
-        System.out.println("Тренеровка светофор 1");
-        //Убираем матрёшку
-        char color = 'g';
-        char r;
-        char y;
-        char g;
-        if (color == 'r') {
-            System.out.println("Красный. Ехать нельзя!");
-        } else if (color == 'y') {
-            System.out.println("Желтый. Внимание!!");
-        } else System.out.println("Зелённый. Ехать можно!!! ");
+        System.out.println("Задание 1");
+        for (int i = 1; i <= 10; i = i + 1) {
+            System.out.println(i);
+        }
     }
 
     public static void task2() {
-        System.out.println("Тренеровка светофор 2");
-        //Добовляем Switch
-        char color = 'g';
-        char r;
-        char y;
-        char g;
-        char l;
-        switch (color) {
-            case 'r':
-                System.out.println("Красный! Ехать нельзя!");
-                break;
-            case 'y':
-                System.out.println("Желтый! Внимание!!");
-                break;
-            case 'g':
-                System.out.println("Зелёный! Можно ехать!!!");
-                break;
-            case 'l':
-                System.out.println("Поворот налево!");
-                break;
-            default:
-                System.out.println("Светофор сломался!");
+        System.out.println("Задание 2");
+        for (int i = 0; i <= 10; i = i + 1) {
+            System.out.println(10 - i);
         }
     }
 
     public static void task3() {
-        System.out.println("Задание 1");
-        int clientOs = 1;
-
-        if (clientOs == 0) {
-            System.out.println("Установите версию приложения для IOS по ссылке!");
-        } else if (clientOs == 1) {
-            System.out.println("Установите версию приложения для Android по ссылке!");
-
+        System.out.println("Задание 3");
+        for (int i = 0; i <= 17; i = i + 2) {
+            System.out.println(i);
         }
     }
 
     public static void task4() {
-        System.out.println("Задание 2");
-        int clientOs = 1;           //Операционная система IOS=0 / Android=1
-        int clientDeviceYear = 2014;//Год выпуска телефона
-
-        if (clientOs == 0 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для IOS по ссылке!");
-        } else if (clientOs == 0 && clientDeviceYear >= 2015) {
-            System.out.println("Установите версию приложения для IOS по ссылке!");
-
-        } else if (clientOs == 1 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегчённую версию приложения для Android по ссылке!");
-        } else if (clientOs == 1 && clientDeviceYear >= 2015) {
-            System.out.println("Установите версию приложения для Android по ссылке!");
-
+        System.out.println("Задание 4");
+        for (int i = 10; i <= 10 && i >= -10; i = i - 1) {
+            System.out.println(i);
         }
     }
 
     public static void task5() {
-        System.out.println("Задание 3");
-        int year = 2400;
-        int year4 = year % 4;
-        int year100 = year % 100;
-        int year400 = year % 400;
-        if (year4 == 0 && year100 != 0 || year400 == 0) {
-            System.out.println(year + " высокосный год");
-        } else {
-            System.out.println(year + " год не высокосный");
-        }
+        System.out.println("Задание 5");
+        for (int year = 1904; year <= 2231; year ++)
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 ==0 ) {
+                System.out.println(year + " год является високосным!!");
+            }
     }
 
     public static void task6() {
-        System.out.println("Задание 4");
-        int deliveryDistance = 0;  //Фактическая до клиента в Км
-        int delivery20Km = 20;     //Доставка в пределах 20 Км занимает 1 сутки-deliveryIn1Day
-        int deliveryIn1Day = 1;
-        int delivery60Km = 60;     //Доставка в пределах 20-60 Км занимает 2 суток-deliveryIn2Day
-        int deliveryIn2Day = 2;
-        int delivery100Km = 100;   //Доставка в пределах 60-100 Км занимает 3 суток-deliveryIn3Day
-        int deliveryIn3Day = 3;
-
-        if (deliveryDistance <= delivery20Km) {
-            System.out.println("Потребуется дней для доставки банковской карты:" + deliveryIn1Day);
-        } else if (deliveryDistance > delivery20Km && deliveryDistance <= delivery60Km) {
-            System.out.println("Потребуется дней для доставки банковской карты:" + deliveryIn2Day);
-        } else if (deliveryDistance > delivery60Km && deliveryDistance <= delivery100Km) {
-            System.out.println("Потребуется дней для доставки банковской карты:" + deliveryIn3Day);
-        } else {
-            System.out.println("Расстояние свыше 100 Км, доставки нет!");
+        System.out.println("Задание 6");
+        for (int i = 7; i <= 98; i += 7) {
+            System.out.println(i);
         }
     }
 
     public static void task7() {
-        System.out.println("Задание 5");
-        int monthNumber = 122;
+        System.out.println("Задание 7");
+        for (int i = 1; i <= 512; i = i * 2) {
+            System.out.println(i);
+        }
+    }
 
-        switch (monthNumber) {
-            case 12:
-            case 1 :
-            case 2 :
-                System.out.println("Зимa");
-                break;
-            case 3 :
-            case 4 :
-            case 5 :
-                System.out.println("Весна");
-                break;
-            case 6 :
-            case 7 :
-            case 8 :
-                System.out.println("Лето");
-                break;
-            case 9 :
-            case 10 :
-            case 11 :
-                System.out.println("Осень");
-                break;
-            default:
-                System.out.println("Не корректно введены данные, месяцец 12, в значение " + monthNumber + "!");
+    public static void task8() {
+        System.out.println("Тренировачное задание для подсчета накоплений");
+        int salary = 65535;
+        int total = 0;
+        for (int i = 1; i <= 12; i++) {
+            total = total + total / 100;
+            total = total + salary;
+            System.out.println("Месяц " + i + " итого " + total);
+        }
+    }
+
+    public static void task9() {
+        System.out.println("Задание 8");
+        //Накопление средства складываю дома под подушку
+        int accrual = 29000;
+        int totalAccrual = 0;
+        for (int i = 1; i <= 12; i++) {
+            totalAccrual = totalAccrual + accrual;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + totalAccrual);
+        }
+    }
+
+    public static void task10() {
+        System.out.println("Задание 9");
+//        Накопление средства теперь каждый месяц кладу в банк под проценты
+        int accrual = 29000;
+        int totalAccrual = 0;
+        for (int i = 1; i <= 12; i++) {
+            totalAccrual = totalAccrual + totalAccrual / 100;
+            totalAccrual = totalAccrual + accrual;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + totalAccrual);
+        }
+    }
+
+    public static void task11() {
+        System.out.println("Задание 10");
+//        Сделать таблицу умножение
+        for (int i = 2; i <= 20; i = i+1*2) {
+            System.out.println(i);
         }
     }
 }
