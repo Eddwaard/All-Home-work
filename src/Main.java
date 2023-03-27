@@ -109,7 +109,7 @@ public class Main {
         int salaryKristina =76230;
         float indexing = 0.10F;
         float salaryMashaAfterIndexing = (salaryMasha*indexing) + salaryMasha;
-        System.out.println("Месячная зарплата Маши после ежегодного повышения составляет "+salaryMashaAfterIndexing + " т.р");
+        System.out.println("Месячная зарплата Маши после ежегодного повышения составляет "+salaryMashaAfterIndexing + " т.р.");
         float salaryDenisAfterIndexing = (salaryDenis*indexing) + salaryDenis;
         System.out.println("Месячная зарплата Дениса после ежегодного повышения составляет "+salaryDenisAfterIndexing + " т.р");
         float salaryKristinaAfterIndexing = (salaryKristina*indexing) + salaryKristina;
