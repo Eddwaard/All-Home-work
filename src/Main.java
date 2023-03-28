@@ -147,7 +147,7 @@ public class Main {
         int year1 = yearNow - 200; //Последние 200 лет пролетает комета
         int year2 = yearNow + 100; //Следующий ближайший год появления кометы
         for (; year <= year2; year = year + 79) {
-            if (year <= year2 && year >= year1) {
+            if (year >= year1) {
                 System.out.println(year);
             }
         }
