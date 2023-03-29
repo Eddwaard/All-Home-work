@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -5,8 +7,8 @@ public class Main {
         task2();//Задание 1
         task3();//Задание 2
         task4();//Задание 3
-        task5();//Задание 4
-
+        task5();//Задание 4 способ 1
+        task6();//Задание 4 способ 2
     }
 
     /*public static void task1() {
@@ -35,119 +37,78 @@ public class Main {
         weights[0] = 1;
         weights[1] = 2;
         weights[2] = 3;
-        int i = 0;
-        for (i = 0; i < weights.length; i++) {
-            System.out.println(weights[i]);
-        }
-        double[] weights2 = new double[]{1, 2, 3};
-        weights2[0] = 1.57;
-        weights2[1] = 7.654;
-        weights2[2] = 9.986;
-        int b = 0;
-        for (i = 0; i < weights.length; i++) {
-            System.out.println(weights2[i]);
-        }
-        int[] weightsCucumbers = new int[]{1, 2, 3};
-        weightsCucumbers[0] = 15;
-        weightsCucumbers[1] = 6;
-        weightsCucumbers[2] = 22;
-        int c = 0;
-        for (i = 0; i < weights.length; i++) {
-            System.out.println(weightsCucumbers[i]);
-        }
+        double[] weights2 = {1.57, 7.654, 9.986};
+        int[] weightsCucumbers = {15, 6, 22};
     }
 
     public static void task3() {
         System.out.println("Задание 2");
-
-        // Вывести целочисленные в строку 1, 2, 3
-        int[] weights = new int[3];
-        weights[0] = 1;
-        weights[1] = 2;
-        weights[2] = 3;
-        int i = 0;
-        for (i = 0; i < weights.length; i++) {
-            if (i == weights.length - 1) {
-                System.out.println(weights[i]);
-                break;
+        // Вывести числа массивов в строку через запятую
+        int[] weights = {1, 2, 3};
+        double[] weights2 = {1.57, 7.654, 9.986};
+        int[] weightsCucumbers = {15, 6, 22};
+        // Вывод 1 массива
+        for (int i = 0; i < weights.length; i++) {
+            System.out.print(weights[i]);
+            if (i != weights.length - 1) {
+                System.out.print(", ");
             }
-            System.out.print(weights[i] + ", ");
         }
-
-        // Вывести дробные в строку 1.57, 7.654, 9.986
-        double[] weights2 = new double[]{1, 2, 3};
-        weights2[0] = 1.57;
-        weights2[1] = 7.654;
-        weights2[2] = 9.986;
-        for (i = 0; i < weights2.length; i++) {
-            if (i == weights2.length - 1) {
-                System.out.println(weights2[i]);
-                break;
+        System.out.println();
+        // Вывод 2 массива
+        for (int i = 0; i < weights2.length; i++) {
+            System.out.print(weights2[i]);
+            if (i != weights2.length - 1) {
+                System.out.print(", ");
             }
-            System.out.print(weights2[i] + ", ");
         }
-
-        // Вывести вес огурцов в строку 15, 6, 22
-        int[] weightsCucumbers = new int[]{1, 2, 3};
-        weightsCucumbers[0] = 15;
-        weightsCucumbers[1] = 6;
-        weightsCucumbers[2] = 22;
-        for (i = 0; i < weightsCucumbers.length; i++) {
-            if (i == weightsCucumbers.length - 1) {
-                System.out.println(weightsCucumbers[i]);
-                break;
+        System.out.println();
+        // Вывод 3 массива
+        for (int i = 0; i < weightsCucumbers.length; i++) {
+            System.out.print(weightsCucumbers[i]);
+            if (i != weightsCucumbers.length - 1) {
+                System.out.print(", ");
             }
-            System.out.print(weightsCucumbers[i] + ", ");
         }
+        System.out.println();
     }
+
     public static void task4() {
         System.out.println("Задание 3");
-
-        // Вывести целочисленные в обратном порядке 1, 2, 3
-        int[] weights = new int[3];
-        weights[2] = 1;
-        weights[1] = 2;
-        weights[0] = 3;
-        int i = 0;
-        for (; i < weights.length; i++) {
-            if (i == weights.length - 1) {
-                System.out.println(weights[i]);
-                break;
+        // Вывести числа массивов в строку через запятую в обратном порядке
+        int[] weights = {1, 2, 3};
+        double[] weights2 = {1.57, 7.654, 9.986};
+        int[] weightsCucumbers = {15, 6, 22};
+        // Вывод 1 массива
+        for (int i = weights.length - 1; i >= 0; i--) {
+            System.out.print(weights[i]);
+            if (i != 0) {
+                System.out.print(", ");
             }
-            System.out.print(weights[i] + ", ");
         }
-
-        // Вывести дробные в обратном порядке 1.57, 7.654, 9.986
-        double[] weights2 = new double[]{1, 2, 3};
-        weights2[2] = 1.57;
-        weights2[1] = 7.654;
-        weights2[0] = 9.986;
-        i =0;
-        for (; i < weights2.length; i++) {
-            if (i == weights2.length - 1) {
-                System.out.println(weights2[i]);
-                break;
+        System.out.println();
+        // Вывод 2 массива
+        for (int i = weights2.length - 1; i >= 0; i--) {
+            System.out.print(weights2[i]);
+            if (i != 0) {
+                System.out.print(", ");
             }
-            System.out.print(weights2[i] + ", ");
         }
-
-        // Вывести вес огурцов в обратном порядке 15, 6, 22
-        int[] weightsCucumbers = new int[]{1, 2, 3};
-        weightsCucumbers[2] = 15;
-        weightsCucumbers[1] = 6;
-        weightsCucumbers[0] = 22;
-        for (i=0; i < weightsCucumbers.length; i++) {
-            if (i == weightsCucumbers.length - 1) {
-                System.out.println(weightsCucumbers[i]);
-                break;
+        System.out.println();
+        // Вывод 3 массива
+        for (int i = weightsCucumbers.length - 1; i >= 0; i--) {
+            System.out.print(weightsCucumbers[i]);
+            if (i != 0) {
+                System.out.print(", ");
             }
-            System.out.print(weightsCucumbers[i] + ", ");
         }
+        System.out.println();
     }
-    public static void task5() {
-        System.out.println("Задание 4");
 
-        // Преобразовать целочисленные 1, 2, 3 в четные числа +1
+    public static void task5() {
+        System.out.println("Задание 4 способ 1");
+
+        // Преобразовать целочисленные 1, 2, 3 в четные числа
         int[] weightsStone = new int[6];
         weightsStone[0] = 1;
         weightsStone[1] = 2;
@@ -156,13 +117,25 @@ public class Main {
         weightsStone[4] = 5;
         weightsStone[5] = 6;
         int i;
-        for (i=0; i < weightsStone.length; i++) {
+        for (i = 0; i < weightsStone.length; i++) {
             if (i == weightsStone.length - 1) {
                 System.out.println(weightsStone[i]);
                 break;
             }
             if (i % 2 != 0)
-            System.out.print(weightsStone[i] + ", ");
+                System.out.print(weightsStone[i] + ", ");
         }
+    }
+
+    public static void task6() {
+        System.out.println("Задание 4 способ 2");
+        // Преобразовать целочисленные 1, 2, 3 в четные числа +1
+        int [] weights = {1, 2, 3};
+        for (int i = 0; i < weights.length; i++) {
+            if (weights[i] % 2 != 0) {
+                weights[i] = weights[i]+1;
+            }
+        }
+        System.out.println(Arrays.toString(weights));
     }
 }
