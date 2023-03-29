@@ -2,156 +2,167 @@ public class Main {
 
     public static void main(String[] args) {
 //        task1();
-//        task2();
-//        task3();
-        task4(); //Задание 1
-        task5(); //Задание 2
-        task6(); //Задание 3
-        task7(); //Задание 4 и 5
-        task8(); //Задание 6
-        task9(); //Задание 7
-        task10(); //Задание 8
+        task2();//Задание 1
+        task3();//Задание 2
+        task4();//Задание 3
+        task5();//Задание 4
+
     }
 
-    /* public static void task1() {
-         System.out.println("Принцып работы цикла while");
-         //Цикл выполняется, только в том случае если выполняется условие, если start = 0, то цикл не выполнится и не выведет результат в консоль
-         int start = 5;
-         while (start > 0) {
-             System.out.println(start);
-             start = start - 1;
-         }
-     }
+    /*public static void task1() {
+        System.out.println("Тренировочное задание");
+        int[] weights = new int[]{90, 91, 93, 92, 85, 87, 88, 89, 0, 0, 0, 0};
+        // Объявляем массив
+        weights[0] = 90;
+        // Присваиваем значение 1-му элементу
+        int januaryWeight = weights[0];
+        // Записываем значение 1-го элемента массива в переменную
+        System.out.println(januaryWeight);
+        // Выводим в консоль 1-й элемент массива. Способ 1
+        System.out.println(weights[0]);
+        // Выводим в консоль -й элемент массива. Способ 2
+        System.out.println(weights[4]);
+        int january = 0;
+        System.out.println(weights[january]);
+        for (int i = 0; i < weights.length; i++) {
+            System.out.println(weights[i]);
+        }
+    }
+**/
+    public static void task2() {
+        System.out.println("Задание 1");
+        int[] weights = new int[3];
+        weights[0] = 1;
+        weights[1] = 2;
+        weights[2] = 3;
+        int i = 0;
+        for (i = 0; i < weights.length; i++) {
+            System.out.println(weights[i]);
+        }
+        double[] weights2 = new double[]{1, 2, 3};
+        weights2[0] = 1.57;
+        weights2[1] = 7.654;
+        weights2[2] = 9.986;
+        int b = 0;
+        for (i = 0; i < weights.length; i++) {
+            System.out.println(weights2[i]);
+        }
+        int[] weightsCucumbers = new int[]{1, 2, 3};
+        weightsCucumbers[0] = 15;
+        weightsCucumbers[1] = 6;
+        weightsCucumbers[2] = 22;
+        int c = 0;
+        for (i = 0; i < weights.length; i++) {
+            System.out.println(weightsCucumbers[i]);
+        }
+    }
 
-     public static void task2() {
-         System.out.print("Принцып работы цикла do while");
-         //Цыкл выполнится в любом условии хотя бы 1 раз, потому что работает по принцыпу сначала действие, а потом проверка условия
-         //Весь момент завязан на переменной если start = 0, то консоль выведет 0. Т.е. цикл в любом случае выполнится
-         int start = 5;
-         do {
-             System.out.println(start);
-             start = start - 1;
-         }
-         while (start > 0);
-     }
+    public static void task3() {
+        System.out.println("Задание 2");
 
-     public static void task3() {
-         System.out.println("Тренировачное задание по замене For на While");
-         int salary = 65535;
-         int total = 0;
-         int i = 0;
-         while (total < 1_000_000) {
-             total = total + total / 100;
-             total = total + salary;
- //            System.out.println("Месяц " + i + " Итого " + total) ;
-             System.out.println(total);
-         }
- //        System.out.println(total);
- //        System.out.println(i);
-     }
- **/
+        // Вывести целочисленные в строку 1, 2, 3
+        int[] weights = new int[3];
+        weights[0] = 1;
+        weights[1] = 2;
+        weights[2] = 3;
+        int i = 0;
+        for (i = 0; i < weights.length; i++) {
+            if (i == weights.length - 1) {
+                System.out.println(weights[i]);
+                break;
+            }
+            System.out.print(weights[i] + ", ");
+        }
+
+        // Вывести дробные в строку 1.57, 7.654, 9.986
+        double[] weights2 = new double[]{1, 2, 3};
+        weights2[0] = 1.57;
+        weights2[1] = 7.654;
+        weights2[2] = 9.986;
+        for (i = 0; i < weights2.length; i++) {
+            if (i == weights2.length - 1) {
+                System.out.println(weights2[i]);
+                break;
+            }
+            System.out.print(weights2[i] + ", ");
+        }
+
+        // Вывести вес огурцов в строку 15, 6, 22
+        int[] weightsCucumbers = new int[]{1, 2, 3};
+        weightsCucumbers[0] = 15;
+        weightsCucumbers[1] = 6;
+        weightsCucumbers[2] = 22;
+        for (i = 0; i < weightsCucumbers.length; i++) {
+            if (i == weightsCucumbers.length - 1) {
+                System.out.println(weightsCucumbers[i]);
+                break;
+            }
+            System.out.print(weightsCucumbers[i] + ", ");
+        }
+    }
     public static void task4() {
-        System.out.println("Задача 1");
-        //Накопить 2 459 000 откладывая каждый месяц 15000р
-        int accrual = 15000;
-        int totalAccrual = 0;
-        int totalMonth = 0;
-        while (totalAccrual <= 2_459_000) {
-            totalAccrual = totalAccrual + accrual;
-            totalMonth = totalMonth + 1;
-            System.out.println("Месяц " + totalMonth + ", сумма накоплений равна " + totalAccrual + " рублей");
-        }
-        System.out.println("Что бы накопить " + totalAccrual + " рублей, нужно " + totalMonth + " месяца");
-    }
+        System.out.println("Задание 3");
 
+        // Вывести целочисленные в обратном порядке 1, 2, 3
+        int[] weights = new int[3];
+        weights[2] = 1;
+        weights[1] = 2;
+        weights[0] = 3;
+        int i = 0;
+        for (; i < weights.length; i++) {
+            if (i == weights.length - 1) {
+                System.out.println(weights[i]);
+                break;
+            }
+            System.out.print(weights[i] + ", ");
+        }
+
+        // Вывести дробные в обратном порядке 1.57, 7.654, 9.986
+        double[] weights2 = new double[]{1, 2, 3};
+        weights2[2] = 1.57;
+        weights2[1] = 7.654;
+        weights2[0] = 9.986;
+        i =0;
+        for (; i < weights2.length; i++) {
+            if (i == weights2.length - 1) {
+                System.out.println(weights2[i]);
+                break;
+            }
+            System.out.print(weights2[i] + ", ");
+        }
+
+        // Вывести вес огурцов в обратном порядке 15, 6, 22
+        int[] weightsCucumbers = new int[]{1, 2, 3};
+        weightsCucumbers[2] = 15;
+        weightsCucumbers[1] = 6;
+        weightsCucumbers[0] = 22;
+        for (i=0; i < weightsCucumbers.length; i++) {
+            if (i == weightsCucumbers.length - 1) {
+                System.out.println(weightsCucumbers[i]);
+                break;
+            }
+            System.out.print(weightsCucumbers[i] + ", ");
+        }
+    }
     public static void task5() {
-        System.out.println("Задача 2");
-        int start = 10;
-        int i = 10;
-        while (start > 0) {
-            System.out.print(start + " ");
-            start = start - 1;
-        }
-        System.out.println();
+        System.out.println("Задание 4");
 
-        for (i = 10; i > 0; i--) {
-            System.out.print(i + " ");
-        }
-    }
-
-    public static void task6() {
-        System.out.println("Задача 3");
-        //Нужно посчитать сколько человек родилось и умерло за 10 лет
-        int countryY = 12_000_000;//Население в стране Y
-        int totalCountryY = 12_000_000;//Население в стране Y + ежегодный прирост
-        int birth = 17;//Рождаемость на каждую 1000 человек
-        int mortality = 8;//Смертность на каждую 1000 человек
-        int totalBirth = birth - mortality;//Количество родившихся с учетом, что 8 умерло
-        int totalBirthInOneYear = totalCountryY / 1000 * totalBirth;//Всего человек родилось за 1 год
-        int year = 1;
-
-        for (year = 1; year <= 10; year++) {
-            totalBirthInOneYear = totalCountryY / 1000 * totalBirth;
-            totalCountryY = totalCountryY + totalBirthInOneYear;
-            System.out.println("Год " + year + ", численность населения состовляет " + totalCountryY);
-        }
-    }
-
-    public static void task7() {
-        System.out.println("Задача 4 и 5");
-        float salary = 15_000;
-        float percent = 0.07F;
-        int month = 1;
-
-        for (; salary <= 12_000_000; month++) {
-            //month = month + 1;
-            salary = salary + (salary * percent);
-            if (month % 6 == 0) {
-                System.out.println("Месяц " + month + ", средств накоплено " + salary);
+        // Преобразовать целочисленные 1, 2, 3 в четные числа +1
+        int[] weightsStone = new int[6];
+        weightsStone[0] = 1;
+        weightsStone[1] = 2;
+        weightsStone[2] = 3;
+        weightsStone[3] = 4;
+        weightsStone[4] = 5;
+        weightsStone[5] = 6;
+        int i;
+        for (i=0; i < weightsStone.length; i++) {
+            if (i == weightsStone.length - 1) {
+                System.out.println(weightsStone[i]);
+                break;
             }
-        }
-        System.out.println("Всего понадобиться " + month + " месяцев, для накопления " + salary + " рублей");
-    }
-
-    public static void task8() {
-        System.out.println("Задача 6");
-        /*Василий решил, что будет копить деньги ближайшие 9 лет.
-        Он хочет знать, какой будет сумма его накоплений каждые полгода на протяжении этих 9 лет**/
-        float salary = 15_000;
-        float percent = 0.07F;
-        int nineYears = 9 * 12;
-        int month = 1;
-
-        for (; month <= nineYears; month++) {
-            salary = salary + (salary * percent);
-            if (month % 6 == 0) {
-                System.out.println("Месяц " + month + ", средств накоплено " + salary);
-            }
-        }
-        System.out.println("За " + nineYears + " месяцев, Василий накопит " + salary + " рублей");
-    }
-
-    public static void task9() {
-        System.out.println("Задача 7");
-        int friday = 3; // число первой пятницы в новом месяце
-        int month = 31; // число дней в отчетном месяце
-        for (; friday <= month; friday = friday + 7) {
-            System.out.println("Сегодня пятница," + friday + "-е число. Необходимо подготовить отчет");
-        }
-    }
-
-    public static void task10() {
-        System.out.println("Задача 8");
-        int year = 0; //Каждые 79 лет пролетаен новая комета
-        int yearNow = 2023;
-        int year1 = yearNow - 200; //Последние 200 лет пролетает комета
-        int year2 = yearNow + 100; //Следующий ближайший год появления кометы
-        for (; year <= year2; year = year + 79) {
-            if (year >= year1) {
-                System.out.println(year);
-            }
+            if (i % 2 != 0)
+            System.out.print(weightsStone[i] + ", ");
         }
     }
 }
-
-
