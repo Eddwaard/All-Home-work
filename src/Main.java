@@ -68,11 +68,13 @@ public class Main {
         //Теперь бухгалтерия хочет понять, какую в среднем сумму компания тратила в течение 30 дней
         int[] arr = generateRandomArray();
         // Тут пишем задачу №3
-        double sum = 0.0;
-        for (double i : arr) {
-            sum = sum + i / arr.length;
+        int sum = 0;
+        float fSum = 0.0f;
+        for (int i : arr) {
+            sum = sum + i; //Сумма трат за месяц
+            fSum = sum / arr.length;//Средняя сумма трат замесяц
         }
-        System.out.println("Средняя сумма трат за месяц составила " + sum + " рублей");
+        System.out.println("Средняя сумма трат за месяц составила " + fSum + " рублей");
     }
 
     static void task5() {
@@ -81,7 +83,7 @@ public class Main {
         // Тут пишем задачу №4
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         for (int i = reverseFullName.length - 1; i >= 0; i--) {
-            if (i != 0);
+            if (i != 0) ;
             System.out.print(reverseFullName[i]);
         }
     }
