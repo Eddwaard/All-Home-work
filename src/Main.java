@@ -2,92 +2,67 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        task1();
-        task2();
-        task3();
-        task4();
-        task5();
-    }
-
-    // Объявить метод «сгенерироватьМассив»
-    public static int[] generateRandomArray() {
-        java.util.Random random = new java.util.Random();
-        int[] arr = new int[30];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = random.nextInt(100_000) + 100_000;
-        }
-        return arr;
+        task1();//Тренеровочная задача от наставника
+        task2();//Задача 1
+        task3();//Задача 2
+        task4();//Задача 3
     }
 
     static void task1() {
         System.out.println("Тренеровочная задача от наставника");
-        int[] weight = {90, 91, 93, 92, 85, 87, 88, 89, 0, 0, 0, 0};
-        // Объявляем переменную с максимальным весом
-        // Значение переменной меньше любого элемента в массиве
-        int maxWeight = -1;
-        for (final int current : weight) {
-            if (current > maxWeight) {
-                maxWeight = current;
-            }
+        String phone = "+960-415 75-37";
+        phone = phone.replace("-", "");
+        phone = phone.replace(" ", "");
+        phone = phone.replace("+", "");
+        if (phone.length() == 10) {
+//            phone = '7' + phone;
+        } else if (phone.length() > 11) {
+            throw new RuntimeException("Телефон слишком длинный");
+        } else if (phone.length() < 10) {
+            throw new RuntimeException("Телефон слишком короткий");
+        } else if (phone.length() == 11 && phone.charAt(0) != '7') {
+            throw new RuntimeException("Среди нас посторонний!");
         }
-        System.out.println("Максимальный вес " + maxWeight + "Кг");
-        // Сравниваем maxWeight с каждым элементом массива
-        for (int i = 0; i < weight.length - 1 && weight[i + 1] != 0; i++) {
-            System.out.println(weight[i + 1] - weight[i]);
+        System.out.println("phone = " + phone);
+        String expectedPhone = "79604157537";
+        if (phone.equals(expectedPhone)) {
+            System.out.println("Успех");
+        } else {
+            System.out.println("Неудача");
         }
     }
 
     static void task2() {
         System.out.println("Задача 1");
-        //Бухгалтеры попросили посчитать сумму всех выплат за месяц
-        int[] arr = generateRandomArray();
-        // Тут пишем задачу №1
-        int sumForMonth = 0;
-        for (int i : arr) {
-            sumForMonth = sumForMonth + i;
-        }
-        System.out.println("Сумма трат за месяц составила " + sumForMonth + " рублей");
+        String firstName = "Ivan";
+        String middleName = "Ivanov";
+        String lastName = "Ivanovich";
+        String fullName = middleName + " " + firstName + " " + lastName;
+        System.out.println("ФИО сотрудника - " + fullName);
     }
 
     static void task3() {
         System.out.println("Задача 2");
-        //Также бухгалтерия попросила найти минимальную и максимальную трату за день
-        int[] arr = generateRandomArray();
-        // Тут пишем задачу №2
-        int minArray = arr[0];
-        int maxArray = arr[0];
-        for (int i : arr) {
-            if (i < minArray) minArray = i;
-            if (i > maxArray) maxArray = i;
-        }
-        System.out.println("Минимальная сумма трат за день составила " + minArray + " рублей." + " Максимальнаясумма трат за день составила " + maxArray + " рублей!");
+        String firstName = "Ivan";
+        String middleName = "Ivanov";
+        String lastName = "Ivanovich";
+        String fullName = middleName + " " + firstName + " " + lastName;
+        String small = fullName + "vanovich";
+        System.out.println("Данные ФИО сотрудника для заполнения отчета — " + small.toUpperCase());
     }
-
     static void task4() {
         System.out.println("Задача 3");
-        //Теперь бухгалтерия хочет понять, какую в среднем сумму компания тратила в течение 30 дней
-        int[] arr = generateRandomArray();
-        // Тут пишем задачу №3
-        int sum = 0;
-        float fSum = 0.0f;
-        for (int i : arr) {
-            sum = sum + i; //Сумма трат за месяц
-            fSum = sum / arr.length;//Средняя сумма трат замесяц
-        }
-        System.out.println("Средняя сумма трат за месяц составила " + fSum + " рублей");
-    }
-
-    static void task5() {
-        System.out.println("Задача 4");
-        //В этом задании нужно написать код который будет корректно выводить значение в консоль Ivanov Ivan
-        // Тут пишем задачу №4
-        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length - 1; i >= 0; i--) {
-            if (i != 0) ;
-            System.out.print(reverseFullName[i]);
-        }
+        String firstName = "Семён";
+        String middleName = "Иванов";
+        String lastName = "Семёнович";
+        String fullName = middleName + " " + firstName + " " + lastName;
+        fullName = fullName.replace("ё", "е");
+        System.out.println("Данные ФИО сотрудника - " + fullName);
     }
 }
+
+
+
 
 
 
