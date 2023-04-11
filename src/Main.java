@@ -30,11 +30,15 @@ public class Main {
             System.out.println("Имя - " + names[i] + "Возраст - " + ages[i]);
         }
         Person sarah = new Person("Sarah", 30);
-        System.out.println("sarah.name = " + sarah.getName());
-        System.out.println("sarah.age = " + sarah.getAge());
+        System.out.println("sarah.name = " + sarah.getName());//геттер
+        System.out.println("sarah.age = " + sarah.getAge());  //геттер
+        sarah.setAge(31);                                     //сеттер
+        System.out.println("sarah.getAge() = " + sarah.getAge());
         Person john = new Person("John", 13);
-        System.out.println("john.name = " + john.getName());
-        System.out.println("john.age = " + john.getAge());
+        System.out.println("john.name = " + john.getName());//геттер
+        System.out.println("john.age = " + john.getAge());  //геттер
+        john.setAge(14);                                    //сеттер
+        System.out.println("john.getAge() = " + john.getAge());
     }
 
     static void task1() {
