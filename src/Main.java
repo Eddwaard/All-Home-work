@@ -45,21 +45,21 @@ public class Main {
 
         String booksOfAlexanderPushkin = "Капитанская Дочка!";
         String authorsNameFirst = "Александр";
-        String authorsNameLost = "Пушкин";
+        String authorsNameLast = "Пушкин";
         int yearsPublicationsBook1 = 1836;
 
         String booksOfLevTolstoy = "Война и Мир!";
         String authorsNameFirst2 = "Лев";
-        String authorsNameLost2 = "Толстой";
+        String authorsNameLast2 = "Толстой";
         int yearsPublicationsBook2 = 1863;
 
         String[] booksName = {"Капитанская Дочка!", "Война и мир!"};
         String[] firstName = {"Александр ", "Лев "};
-        String[] lostName = {"Пушкин", "Толстой"};
+        String[] lastName = {"Пушкин", "Толстой"};
         int[] yearsPublication = {1836, 1863};
 
         for (int i = 0; i < booksName.length; i++) {
-            System.out.println("Название книги - " + booksName[i] + " Автор книги - " + firstName[i] + lostName[i] + "." + " Год издания - " + yearsPublication[i] + ".");
+            System.out.println("Название книги - " + booksName[i] + " Автор книги - " + firstName[i] + lastName[i] + "." + " Год издания - " + yearsPublication[i] + ".");
         }
         printSeparator();
     }
@@ -67,21 +67,23 @@ public class Main {
     static void task2() {
         System.out.println("Задача написать конструктор");
 
-        Book booksOfAlexanderPushkin = new Book("Капитанская Дочка!", 1836);
-        Author authorsName = new Author("Александр ", "Пушкин");
-        System.out.println("booksOfAlexanderPushkin.booksName = " + booksOfAlexanderPushkin.getBooksName());
-        System.out.println("authorsName = " + authorsName.getFirstName() + authorsName.getLostName());
-        System.out.println("booksOfAlexanderPushkin.getYearsPublication = " + booksOfAlexanderPushkin.getYearOfPublicationOfTheBook());
-        booksOfAlexanderPushkin.setYearOfPublicationOfTheBook(1888);
-        System.out.println("booksOfAlexanderPushkin.getYearsPublication = " + booksOfAlexanderPushkin.getYearOfPublicationOfTheBook());
+        Author author = new Author("Александр! ", "Пушкин!");
+        Book book = new Book("Капитанская Дочка!", 1836, "Александр Сергеевич Пушкин!");
+        System.out.println("booksOfAlexanderPushkin.booksName = " + book.getBooksName());
+        System.out.println("booksOfAlexanderPushkin.getYearsPublication = " + book.getYearOfPublicationOfTheBook());
+        System.out.println("book.Author = " + book.getAuthor());
+        System.out.println("authorsName = " + author.getFirstName() + author.getLastName());
+        book.setYearOfPublicationOfTheBook(1888);
+        System.out.println("booksOfAlexanderPushkin.getYearsPublication = " + book.getYearOfPublicationOfTheBook());
 
-        Book booksOfLevTolstoy = new Book("Война и Мир!", 1863);
-        Author authorsName2 = new Author("Лев ", "Толстой");
-        System.out.println("booksOfLevTolstoy.booksName = " + booksOfLevTolstoy.getBooksName());
-        System.out.println("authorsName2 = " + authorsName2.getFirstName() + authorsName2.getLostName());
-        System.out.println("booksOfLevTolstoy.getYearsPublication = " + booksOfLevTolstoy.getYearOfPublicationOfTheBook());
-        booksOfLevTolstoy.setYearOfPublicationOfTheBook(1777);
-        System.out.println("booksOfLevTolstoy.getYearsPublication = " + booksOfLevTolstoy.getYearOfPublicationOfTheBook());
+        Author author2 = new Author("Лев ", "Толстой");
+        Book book1 = new Book("Война и Мир!", 1863, "Лев Николаевич Толстой!");
+        System.out.println("booksOfLevTolstoy.booksName = " + book1.getBooksName());
+        System.out.println("booksOfLevTolstoy.getYearsPublication = " + book1.getYearOfPublicationOfTheBook());
+        System.out.println("book.Author = " + book1.getAuthor());
+        System.out.println("authorsName2 = " + author2.getFirstName() + author2.getLastName());
+        book1.setYearOfPublicationOfTheBook(1777);
+        System.out.println("booksOfLevTolstoy.getYearsPublication = " + book1.getYearOfPublicationOfTheBook());
     }
 }
 
