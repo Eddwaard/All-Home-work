@@ -67,23 +67,23 @@ public class Main {
     static void task2() {
         System.out.println("Задача написать конструктор");
 
-        Author author = new Author("Александр! ", "Пушкин!");
-        Book book = new Book("Капитанская Дочка!", 1836, "Александр Сергеевич Пушкин!");
-        System.out.println("booksOfAlexanderPushkin.booksName = " + book.getBooksName());
-        System.out.println("booksOfAlexanderPushkin.getYearsPublication = " + book.getYearOfPublicationOfTheBook());
-        System.out.println("book.Author = " + book.getAuthor());
+        Author author = new Author("Александр ", "Пушкин!");
+        Book book1 = new Book("Капитанская Дочка!", 1836, author);
+        System.out.println("booksOfAlexanderPushkin.booksName = " + book1.getBooksName());
+        System.out.println("booksOfAlexanderPushkin.getYearsPublication = " + book1.getYearOfPublicationOfTheBook());
+        System.out.println("Author = " + book1.getAuthor());
         System.out.println("authorsName = " + author.getFirstName() + author.getLastName());
-        book.setYearOfPublicationOfTheBook(1888);
-        System.out.println("booksOfAlexanderPushkin.getYearsPublication = " + book.getYearOfPublicationOfTheBook());
+        book1.setYearOfPublicationOfTheBook(1888);
+        System.out.println("booksOfAlexanderPushkin.getYearsPublication = " + book1.getYearOfPublicationOfTheBook());
 
-        Author author2 = new Author("Лев ", "Толстой");
-        Book book1 = new Book("Война и Мир!", 1863, "Лев Николаевич Толстой!");
-        System.out.println("booksOfLevTolstoy.booksName = " + book1.getBooksName());
-        System.out.println("booksOfLevTolstoy.getYearsPublication = " + book1.getYearOfPublicationOfTheBook());
-        System.out.println("book.Author = " + book1.getAuthor());
+        Author author2 = new Author("Лев ", "Толстой!");
+        Book book2 = new Book("Война и Мир!", 1863, author2);
+        System.out.println("booksOfLevTolstoy.booksName = " + book2.getBooksName());
+        System.out.println("booksOfLevTolstoy.getYearsPublication = " + book2.getYearOfPublicationOfTheBook());
+        System.out.println("Author = " + book2.getAuthor());
         System.out.println("authorsName2 = " + author2.getFirstName() + author2.getLastName());
         book1.setYearOfPublicationOfTheBook(1777);
-        System.out.println("booksOfLevTolstoy.getYearsPublication = " + book1.getYearOfPublicationOfTheBook());
+        System.out.println("booksOfLevTolstoy.getYearsPublication = " + book2.getYearOfPublicationOfTheBook());
     }
 }
 
