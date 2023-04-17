@@ -73,6 +73,8 @@ public class Main {
         System.out.println("booksOfLevTolstoy.getYearsPublication = " + book2.getYearOfPublicationOfTheBook());
         printSeparator();
 
+        book1 = book2;//По идее я тут реализовал метод equals
+        System.out.println(book1.equals(book2));
 
 
 
