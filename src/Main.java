@@ -47,9 +47,6 @@ public class Main {
         printSeparator();
     }
 
-    public Main() {
-    }
-
     static void task2() {
         System.out.println("Задача реализовать методы toString, equals и hashCode в классах Author и Book, которые создал на прошлом уроке.");
         //Обратить внимание, что toString книги не должен дублировать код из toString автора, а должен делегировать (вызывать) его версию метода.
