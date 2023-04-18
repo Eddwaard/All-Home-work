@@ -56,7 +56,7 @@ public class Main {
         System.out.println("booksOfAlexanderPushkin.booksName = " + book1.getBooksName());
         System.out.println("booksOfAlexanderPushkin.getYearsPublication = " + book1.getYearOfPublicationOfTheBook());
         System.out.println(book1);
-        System.out.println("authorsName = " + author.getFirstName() + author.getLastName());
+        System.out.println("authorsName = " + author);
         book1.setYearOfPublicationOfTheBook(1888);
         System.out.println("booksOfAlexanderPushkin.getYearsPublication = " + book1.getYearOfPublicationOfTheBook());
 
@@ -65,7 +65,7 @@ public class Main {
         System.out.println("booksOfLevTolstoy.booksName = " + book2.getBooksName());
         System.out.println("booksOfLevTolstoy.getYearsPublication = " + book2.getYearOfPublicationOfTheBook());
         System.out.println(book2);
-        System.out.println("authorsName2 = " + author2.getFirstName() + author2.getLastName());
+        System.out.println("authorsName2 = " + author2);
         book1.setYearOfPublicationOfTheBook(1777);
         System.out.println("booksOfLevTolstoy.getYearsPublication = " + book2.getYearOfPublicationOfTheBook());
         printSeparator();
