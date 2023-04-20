@@ -16,7 +16,7 @@ public class Author {
     public String getLastName() {
         return lastName;
     }
-
+@Override
    public String toString() {
        return "Имя " + this.firstName + " Отчество " + this.lastName;
     }
